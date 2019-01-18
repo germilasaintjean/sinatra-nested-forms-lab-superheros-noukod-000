@@ -1,5 +1,6 @@
  require 'sinatra/base'
-# require '../config/environment'
+  require './app'
+  
 class App < Sinatra::Base
 
     set :views, Proc.new { File.join(root, "./views/") }
@@ -16,7 +17,7 @@ post '/teams' do
   end
   @heroes=Hero.all
 
-erb :team
+  erb :team
 end
 
 end

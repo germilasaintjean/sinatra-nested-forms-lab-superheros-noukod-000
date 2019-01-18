@@ -1,5 +1,6 @@
  require 'sinatra/base'
-# require '../config/environment'
+  # require_all './app'
+
 class App < Sinatra::Base
 
     set :views, Proc.new { File.join(root, "./views/") }
@@ -9,14 +10,14 @@ get '/' do
 end
 
 post '/teams' do
-  @team = team.new(@params"[name]",@params"[motto]")
+  @team = Team.new(@params["team"]["name"],@params["team"]["motto"])
   @params["team"]["members"].each do |hero|
-
-    Hero.new(hero[:name],hero[:power],hero[:bigraphy])
+  Hero.new(hero[:name],hero[:power],hero[:biography])
   end
-  @hereos=Hero.all
 
-erb :team
+  @heroes=Hero.all
+
+  erb :team
 end
 
 end

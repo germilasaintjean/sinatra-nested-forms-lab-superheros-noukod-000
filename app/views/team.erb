@@ -1,7 +1,7 @@
 <h1>Team Name: <%=@team.name%> </h1>
 <p>Team Motto: <%=@team.motto%></p>
 <% @heroes.each_with_index do |hero,index| %>
-  <h2>Hero Name: <%= @hero.name %></h2>
-  <h2>Hero Power: <%= @hero.power %></h2>
-  <h2>Hero Biography: <%= @hero.biography%></h2>
+  <h2>Hero Name: <%= hero.name %></h2>
+  <h2>Hero Power: <%= hero.power %></h2>
+  <h2>Hero Biography: <%= hero.biography%></h2>
 <% end %>

@@ -13,7 +13,7 @@ post '/teams' do
   @team = Team.new(@params["team"]["name"],@params["team"]["motto"])
   @params["team"]["members"].each do |hero|
 
-    Hero.new(hero[:name],hero[:power],hero[:bigraphy])
+    Hero.new(hero[:name],hero[:power],hero[:biography])
   end
   @heroes=Hero.all
 

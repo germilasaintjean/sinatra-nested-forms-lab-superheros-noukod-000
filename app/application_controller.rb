@@ -1,5 +1,5 @@
  require 'sinatra/base'
-  require './app'
+  require_all './app'
 
 class App < Sinatra::Base
 
